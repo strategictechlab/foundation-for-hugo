@@ -1,13 +1,13 @@
 name = 'Foundation for Hugo'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
-description = 'Theme description'
+licenselink = 'https://github.com/strategictechlab/foundation-for-hugo/blob/main/LICENSE'
+description = 'An awesome Hugo theme built on the Foundation framework.'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/owner/repo'
+homepage = 'https://github.com/strategictechlab/foundation-for-hugo/'
 
 # If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
+demosite = 'https://github.com/strategictechlab/foundation-for-hugo/'
 
 # Taxonomy terms
 tags = ['blog', 'company']
@@ -15,5 +15,6 @@ features = ['some', 'awesome', 'features']
 
 # If the theme has multiple authors
 authors = [
+  {name = 'Strategic Tech Lab', homepage = 'https://strategictechlab.com'},
   {name = 'Tucker Roussel', homepage = 'https://tuckerroussel.com'},
 ]
