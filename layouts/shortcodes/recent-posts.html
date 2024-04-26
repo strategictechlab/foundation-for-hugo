@@ -1,0 +1,8 @@
+<div class="grid-x grid-margin-x grid-margin-y small-up-1 medium-up-2 large-up-3 align-center">
+    {{ range first 3 (where (where site.Pages "Section" "blog") "Params.type" "ne" "archive") }}
+        <div class="cell">
+            <h4><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
+            {{ .Summary }}
+        </div>
+    {{ end }}
+</div>

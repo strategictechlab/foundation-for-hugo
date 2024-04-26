@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+
+  <body>
+    <nav class="mobile-off-canvas off-canvas position-right" id="off-canvas-menu" data-off-canvas data-auto-focus="false" data-transition="push" data-content-scroll="false" role="navigation">
+      <ul id="mobile-menu" class="vertical menu mobile-menu margin-bottom-2" data-accordion-menu data-submenu-toggle="true">
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+      </ul>
+
+      <ul id="mobile-secondary-menu" class="vertical menu secondary-menu">
+        {{ partial "menu.html" (dict "menuID" "secondary" "page" .) }}
+      </ul>
+    </nav>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="layout-wrapper">
+        {{ partial "header.html" . }}
+        
+        <main class="site-main">
+          {{ block "main" . }}{{ end }}
+        </main>
+
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+
+    {{ partialCached "footer/footer-scripts.html" . }}
+  </body>
+
+</html>

@@ -1,0 +1,37 @@
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/what-input@5.2.12/dist/what-input.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+
+{{- with resources.Get "js/app.js" }}
+  {{- if eq hugo.Environment "development" }}
+    {{- with . | js.Build }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- else }}
+    {{- $opts := dict "minify" true }}
+    {{- with . | js.Build $opts | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- if eq hugo.Environment "development" }}
+<script id="__bs_script__">
+(function() {
+  try {
+    var script = document.createElement('script');
+    if ('async') {
+      script.async = true;
+    }
+    script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.3'.replace("HOST", location.hostname);
+    if (document.body) {
+      document.body.appendChild(script);
+    } else if (document.head) {
+      document.head.appendChild(script);
+    }
+  } catch (e) {
+    console.error("Browsersync: could not append script tag", e);
+  }
+})();
+</script>
+{{- end }}

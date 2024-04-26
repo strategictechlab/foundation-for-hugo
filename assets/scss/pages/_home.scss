@@ -1,0 +1,36 @@
+.home-hero {
+	position: relative;
+    background-image: url(/demo/img/home-bg-small-02.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    padding-top: 70px;
+
+    @include breakpoint(large) {
+		background-image: url(/demo/img/home-bg-01.svg);
+		background-position: center;
+		padding-bottom: 120px;
+    	padding-top: 90px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, 0.6);
+		z-index: 1;
+	}
+
+	color: $white;
+
+	.grid-container {
+		position: relative;
+		z-index: 2;
+	}
+}

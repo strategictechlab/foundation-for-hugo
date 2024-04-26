@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$body-font-family: "Roboto", 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
+$foundation-palette: (
+  "primary": #1779ba,
+  "secondary": #767676,
+  "success": #3adb76,
+  "warning": #ffae00,
+  "alert": #cc4b37,
+  "white": $white
+);

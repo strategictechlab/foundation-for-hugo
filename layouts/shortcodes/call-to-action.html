@@ -1,0 +1,9 @@
+{{ if .IsNamedParams }}
+    <div id="{{ if .Get "id" }}{{ .Get "id" }}{{ end }}" class="call-to-action callout {{ if .Get "class" }}{{ .Get "class" }}{{ else }}primary{{ end }}">
+        <div class="text-center">
+            <h2>{{ .Get "heading" }}</h2>
+            {{ if .Get "subheading" }}<h5>{{ .Get "subheading" }}</h5>{{ end }}
+            {{ if .Get "link_text" }}<a href="{{ .Get "link_url" }}" class="button margin-top-1">{{ .Get "link_text" }}</a>{{ end }}
+        </div>
+    </div>
+{{ end }}

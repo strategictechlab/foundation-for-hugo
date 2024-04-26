@@ -1,0 +1,8 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{- with resources.Get "img/favicon.png" }}
+<link rel="icon" href="{{ .RelPermalink }}" type="image/x-icon">
+{{- end }}
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
