@@ -28,6 +28,18 @@ weight = 10
   pageRef = '/blog/post'
   weight = 4
 
+  [[menus.main]]
+  parent = "Layouts"
+  name = 'Work / Custom Archive'
+  pageRef = '/work'
+  weight = 5
+
+  [[menus.main]]
+  parent = "Layouts"
+  name = 'Work Post'
+  pageRef = '/work/post'
+  weight = 6
+
 [[menus.main]]
 name = "Content Types"
 pageRef = '/content-types'

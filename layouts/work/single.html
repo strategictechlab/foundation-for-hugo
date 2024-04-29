@@ -2,10 +2,6 @@
   <div class="page-header">
     <div class="grid-container">
       <h1>{{ .Title }}</h1>
-
-      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := .Date | time.Format ":date_long" }}
-      <time class="h3 subheader" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
     </div>
   </div>
 
@@ -15,10 +11,10 @@
        {{ $big := .Fit "1024x780 center" }}
        {{ $small := $big.Resize "512x" }}
         <img 
-          srcset="{{ $small.RelPermalink }} 512w, {{ $big.RelPermalink }} 1024w" 
-          sizes="(max-width: 600px) 512px, 1024px"
-          alt="{{ $img.Title }}"
-          class="">
+                    srcset="{{ $small.RelPermalink }} 512w, {{ $big.RelPermalink }} 1024w" 
+                    sizes="(max-width: 600px) 512px, 1024px"
+                    alt="{{ $img.Title }}"
+                    class="">
     {{ end }}
 
     {{ .Content }}
