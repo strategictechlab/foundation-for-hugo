@@ -30,13 +30,13 @@ weight = 10
 
   [[menus.main]]
   parent = "Layouts"
-  name = 'Work / Custom Archive'
+  name = 'Custom Archive'
   pageRef = '/work'
   weight = 5
 
   [[menus.main]]
   parent = "Layouts"
-  name = 'Work Post'
+  name = 'Custom Post'
   pageRef = '/work/post'
   weight = 6
 

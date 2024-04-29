@@ -75,32 +75,7 @@ draft = false
     </div>
     <div class="recent-work margin-top-3 margin-bottom-3">
         <h3>Our Recent Work</h3>
-        <div class="grid-x grid-margin-x grid-margin-y medium-up-3 large-up-4">
-            <div class="cell">
-                {{< image-processor src="img/1.jpg" process="fill 550x550" class="thumbnail" >}}
-            </div>
-            <div class="cell">
-                {{< image-processor src="img/2.jpg" process="fill 550x550" class="thumbnail" >}}
-            </div>
-            <div class="cell">
-                {{< image-processor src="img/3.jpg" process="fill 550x550" class="thumbnail" >}}
-            </div>
-            <div class="cell">
-                {{< image-processor src="img/4.jpg" process="fill 550x550" class="thumbnail" >}}
-            </div>
-            <div class="cell">
-                {{< image-processor src="img/5.jpg" process="fill 550x550" class="thumbnail" >}}
-            </div>
-            <div class="cell">
-                {{< image-processor src="img/6.jpg" process="fill 550x550" class="thumbnail" >}}
-            </div>
-            <div class="cell">
-                {{< image-processor src="img/7.jpg" process="fill 550x550" class="thumbnail" >}}
-            </div>
-            <div class="cell">
-                {{< image-processor src="img/8.jpg" process="fill 550x550" class="thumbnail" >}}
-            </div>
-        </div>
+        {{< recent-work >}}
     </div>
     <div class="recent-posts margin-top-3 margin-bottom-3">
         <h3>Our Recent Posts</h3>
