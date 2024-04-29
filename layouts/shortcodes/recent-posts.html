@@ -1,6 +1,25 @@
 <div class="grid-x grid-margin-x grid-margin-y small-up-1 medium-up-2 large-up-3 align-center">
     {{ range first 3 (where (where site.Pages "Section" "blog") "Params.type" "ne" "archive") }}
         <div class="cell">
+            <a href="{{ .RelPermalink }}" class="thumbnail">
+            {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+            {{ with $img }}
+               {{ $big := .Fill "800x400 center" }}
+               {{ $small := $big.Resize "400x" }}
+                <img 
+                    srcset="{{ $small.RelPermalink }} 400w, {{ $big.RelPermalink }} 800w" 
+                    sizes="(max-width: 600px) 400px, 800px"
+                    alt="{{ $img.Title }}"
+                    class="">
+            {{ else }}
+                <img 
+                    srcset="http://fpoimg.com/400x200?text=Featured%20Image 400w, http://fpoimg.com/800x400?text=Featured%20Image 800w" 
+                    sizes="(max-width: 600px) 400px, 800px"
+                    alt="Featured Image FPO"
+                    class="">
+            {{ end }}
+            </a>
+
             <h4 class="post-title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
             {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
             {{ $dateHuman := .Date | time.Format ":date_long" }}

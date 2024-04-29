@@ -10,6 +10,13 @@
   </div>
 
   <div class="grid-container">
+    {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ with $img }}
+       {{ $big := .Fit "1024x512 center" }}
+       {{ $small := $big.Resize "512x" }}
+        <img srcset="{{ $small.RelPermalink }} 1x, {{ $big.RelPermalink }} 2x" alt="{{ $img.Title }}" width="{{ $big.Width }}"  class="">
+    {{ end }}
+
     {{ .Content }}
     
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
