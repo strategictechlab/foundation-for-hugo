@@ -43,33 +43,22 @@ weight = 10
 [[menus.main]]
 name = "Content Types"
 pageRef = '/content-types'
-weight = 11
+weight = 20
 
 [[menus.main]]
 name = 'Sample Page'
 pageRef = '/sample'
-weight = 20
-
-[[menus.main]]
-name = 'Kitchen Sink'
-pageRef = '/foundation'
 weight = 30
 
 [[menus.main]]
-name = 'Blog'
-pageRef = '/blog'
+name = 'Kitchen Sink'
+pageRef = '/foundation-kitchen-sink'
 weight = 40
 
 [[menus.main]]
-parent = "Blog"
-name = 'Tags'
-pageRef = '/tags'
-weight = 50
-
-[[menus.main]]
 name = 'Get Started'
-pageRef = '/foundation'
-weight = 60
+pageRef = '/get-started'
+weight = 50
 [menus.main.params]
       class = 'button'
 
