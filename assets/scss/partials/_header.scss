@@ -48,6 +48,10 @@
   z-index: 99;
   position: relative;
 
+  .top-bar-left {
+    flex: 0 0 auto;
+  }
+
   // logo styling
   a[rel="home"] {
     img {
